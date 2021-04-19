@@ -1,0 +1,199 @@
+/* Níveis de força dos marcadores CSS:
+
+Simples:
+
+tag - 1
+
+class - 10
+
+id - 100
+
+inline - 1000
+
+Composto:
+
+tag + tag = 1 + 1 = 2
+
+tag + class = 1 + 10 = 11
+
+tag + class + id = 1 + 10 + 100 = 111
+
+*/
+
+body {
+	position: relative;
+	min-width: 940px;
+}
+
+header {
+	background: #cccccc;
+	padding: 20px 0;
+}
+
+.caixa {
+	position: relative;
+	width: 940px;
+	margin: 0 auto;
+}
+
+nav {
+	position: absolute;
+	top: 110px;
+	right: 0;
+	padding-right: 30px;
+}
+
+nav li {
+	display: inline;
+	margin: 0 0 0 15px;
+}
+
+nav a {
+	text-transform: uppercase;
+	color: #000000;
+	font-weight: bold;
+	font-size: 22px;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.produtos {
+	width: 940px;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+
+.produtos li {
+	display: inline-block;
+	text-align: center;
+	width: 30%;
+	vertical-align: top;
+	margin: 0 1.5%;
+	padding: 30px 20px;
+	box-sizing: border-box;
+	border: 5px solid #eeeeee;
+	border-top: 10px solid #cccccc;
+	border-radius: 20px 20px 10px 10px;
+}
+
+.produtos li:hover {
+	border-color: #000000;
+}
+
+.produtos li:active {
+	border-color: #efefef;	
+}
+
+.produtos li:hover h2 {
+	font-size: 34px;
+}
+
+.produtos h2 {
+	font-size: 30px;
+	font-weight: bold;
+}
+							
+.produto-descricao {
+	font-size: 18px;
+}
+
+.produto-preco {
+	font-size: 22px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+footer {
+	text-align: center;
+	background: url("bg.jpg");
+	padding: 40px 0;
+}
+
+.copyright {
+	color: #FFFFFF;
+	font-size: 13px;
+	margin: 20px 0 0;
+}
+
+main {
+	width: 940px;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+
+#mainContato {
+	padding-left: 20%;
+}
+
+form {
+	margin: 40px 0;
+}
+
+form label, form legend {
+	display: block;
+	font-size: 20px;
+	margin: 0 0 10px;
+}
+
+form fieldset label {
+	font-size: 16px;
+} 
+
+.inputPadrao {
+	display: block;
+	margin: 0 0 20px;
+	padding: 5px 25px;
+	width: 50%;
+	font-size: 16px;
+}
+
+.marginContato {
+	margin: 40px 0 0 0;
+}
+
+select, option, input.submit {
+	width: 10%;
+	height: 25px;
+	background: #cccccc;
+	color: #000000;
+	border: 2px solid #000000;
+	box-sizing: content-box;
+	font-weight: bold;
+	transition: 1s all;
+	cursor: pointer;
+}
+
+select:hover, input.submit:hover {
+	background: #000000;
+	color: #ffffff;
+	transform: scale(1.2);
+}
+
+input.submit:active {
+	background: #ffffff;
+	color: #000000;
+}
+
+.checkbox {
+	margin: 20px 0;
+}
+
+table {
+	margin: 20px 0 40px;
+}
+
+thead {
+	background: #555555;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+td, th {
+	border: 1px solid #555555;
+	padding: 8px 15px;
+}
+

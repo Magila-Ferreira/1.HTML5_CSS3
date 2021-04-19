@@ -1,0 +1,57 @@
+/* Inserindo CSS IN-STYLE */
+#banner {
+    width: 100%;
+}
+
+.principal {
+    background-color: #efefef;
+    padding-bottom: 20px;
+}
+
+.tituloPrincipal {
+    padding-left: 20px;
+}
+
+.tituloCentralizado {
+    text-align: center;
+}
+
+h2 {
+    background-color: #cccccc;
+    border: 2px solid #ffffff;
+    padding: 20px;
+    margin: 40px;
+}
+
+p {
+    text-align: center;
+}
+
+#missao {
+    font-size: 20px;
+}
+
+#red {
+    color: #ff0000;
+}
+
+.itens {
+    font-style: italic;
+}
+
+.beneficios {
+    background: #ffffff;
+    padding: 30px;
+}
+
+ul {
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    margin-right: 15%;
+}
+
+.imgbeneficios {
+    width: 50%;
+}
+

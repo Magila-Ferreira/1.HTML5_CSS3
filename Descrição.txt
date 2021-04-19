@@ -1,0 +1,36 @@
+Curso: 1 - HTML5+CSS3 parte 1: A primeira página da Web.
+
+01. Marcação do primeiro texto
+02. Separando o conteúdo e informações
+03. Trabalhando com CSS
+04. Estilizando imagens
+05. Listas e divisões de conteúdo 
+06. Finalizando a página
+
+Curso: 2 - HTML5+CSS3 parte 2: Posicionamentos, listas e navegação:
+
+01. Criando uma nova página
+02. Navegação entre páginas
+03. Posicionamento dos elementos
+04. A tag section
+05. Lidando com bordas
+06. Pseudo-classes CSS
+07. Finalizando a página de produtos  
+
+Curso: 3 - HTML5+CSS3 parte 3: Trabalhando com formulários e tabelas.
+
+01. Criando uma nova página
+02. Começando um formulário
+03. Tipos de campos
+04. Melhorando a semântica
+05. CSS avançado
+06. Estrutura de tabelas
+
+Curso: 4 - HTML5+CSS3 parte 4: Avançando no CSS.
+
+01. Adaptando a página inicial (HOME)
+02. Conteúdo externo
+03. Melhorando o CSS
+04. Selecionando qualquer coisa
+05. Opacidade e sombra
+06. Design responsivo

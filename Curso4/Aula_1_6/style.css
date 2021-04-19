@@ -1,0 +1,452 @@
+/* Níveis de força dos marcadores CSS:
+
+Simples:
+
+tag - 1
+
+class - 10
+
+id - 100
+
+inline - 1000
+
+Composto:
+
+tag + tag = 1 + 1 = 2
+
+tag + class = 1 + 10 = 11
+
+tag + class + id = 1 + 10 + 100 = 111
+-----------------------------------------------------------
+
+Pseudo elementos:
+
+:first-letter {} - seleciona a primeira letra de uma conteúdo;
+
+:first-line {} - seleciona a primeira linha de um conteúdo;
+
+:before {content: " ";} - seleciona um espaço antes do conteúdo;
+
+:after {contetnt: " ";} - seleciona um espaço depois do conteúdo;
+-----------------------------------------------------------
+
+Seletores avançados:
+
+main > p {} - seleciona todos os parágrafos que são filhos diretos da main;
+
+img + p {} - seleciona apenas o primeiro parágrafo irmão de img;
+
+img ~ p {} - seleciona todos os parágrafos irmãos de img;
+
+.principal p:not(#missao) {} - seleciona todos os parágrafos da classe principal que NÃO possuem o ID missao.
+----------------------------------------------------------  
+Transformando cores HEXADECIMAIS em RGB e vice-versa:
+														
+HEXA						RGB
+75							?
+'7' . (16) + '5'=			112 + 5 = 117
+
+?							173
+10	13 = AD					'173' / (16) = 10 resto 13
+
+*/
+
+/*****					GLOBAL					******/
+body {
+	position: relative;					/*Permite configurar a posição relativa do objeto, deslocando seu ponto inicial na página*/
+	min-width: 940px;
+	margin: 0;
+	padding: 0;
+}
+
+/*****					NAVBAR					*****/
+header {
+	background: #cccccc;
+	padding: 20px 0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.caixa {
+	position: relative;
+	width: 940px;
+	margin: 0 auto;
+}
+
+nav {
+	position: absolute;					/*Permite que o objeto descole da página, de forma que é possível configurá-la*/
+	top: 110px;
+	right: 0;
+	padding-right: 30px;
+}
+
+nav li {
+	display: inline;					/*Configura os elementos para ocuparem a mesma linha*/
+	margin: 0 0 0 15px;
+}
+
+nav a {
+	text-transform: uppercase;					/*Modifica o texto para caixa alta*/
+	color: #000000;
+	font-weight: bold;
+	font-size: 22px;
+	text-decoration: none;					/*Anula as decorações automáticas do texto - exemplo: sublinhado*/
+}
+
+nav a:hover {
+	color: #ffffff;
+	text-decoration: underline;					/*Insere decorações no texto, no caso underline, linha abaixo do texto*/					
+}
+
+/*****					FOOTER					*****/
+footer {
+	text-align: center;
+	background: url("bg.jpg");
+	padding: 40px 0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.copyright {
+	color: #FFFFFF;
+	font-size: 13px;
+	margin: 20px 0 0;
+}
+
+/*****					HOME					*****/
+.tituloPrincipal {
+	padding: 20px 30px;
+	font-size: 50px;
+	font-weight: bolder;
+	background: #000000;
+	color: #ffffff;
+	font-family: 'Montserrat', sans-serif;
+	text-shadow: -5px -5px 2px #555555;
+	
+}
+
+.banner {
+	width:100%;
+}
+
+.principal{
+	padding: 2em 0;
+	background: #fefefe;
+	width: 940px;
+	margin: 0 auto;
+}
+
+h2.titulo {
+	margin: 0 auto 20px auto;
+	border: 2px solid #cccccc;
+	padding: 20px 0;
+	background: #eeeeee;
+	font-size: 25px;
+	font-weight: bolder;
+	text-align: center;
+	width: 940px;
+}
+
+.utensilios {
+	width: 15%;
+	float: left;					/*Flutua a imagem, mas deixa sua sobra abaixo, permitindo que o texto ocupe o espaço adjacente, sem que ele fique sob à imagem*/
+	margin: 0px 20px 20px 0;
+}
+
+p {
+	text-align: center;
+}
+
+p strong {
+	font-weight: bolder;
+}
+
+#missao {
+	font-size: 20px;
+	padding: 20px;
+	font-style: italic;
+}
+
+em strong {
+	color: #FF0000;
+}
+
+.mapa {
+	padding: 2em 0;
+	background: linear-gradient(#fefefe, #888888);
+}
+
+.mapa p {
+	margin: 0 0 2em;
+	text-align: center;
+}
+
+.mapaConteudo {
+	width: 940px;
+	margin: 0 auto;
+}
+
+.beneficios {
+	background: #888888;
+	padding: 2em 0;
+	clear: left;					/*Limpa o float*/
+}
+
+.beneficios h2.titulo {
+	background: rgba(85, 85, 85, 1);
+	border: 2px solid #444444;
+	color: #eeeeee;
+}
+
+.conteudoBeneficios {
+	width: 640px;
+	margin: 0 auto;
+}
+
+.listaBeneficios {
+	display: inline-block;					/*Permite que o objeto ocupe apenas o espaço correspondente à sua largura (width) e não a linha inteira, configurando mais de um elemento na mesma linha*/
+	vertical-align: top;
+	width: 40%;
+}
+
+.itens {
+	font-style: italic;
+	line-height: 1.5;
+	font-size: 20px;
+}
+
+.itens:before {
+	content: "\2606";
+}
+
+.itens:first-child {					/*Permite marcar um dos elementos (child) da lista, nesse caso o primeiro (first)*/
+	font-weight: bold;
+}
+
+.imagemBeneficios {
+	width: 60%;
+	transition: 3s;
+	box-shadow: 5px 10px 5px 5px #222222, 15px 20px 10px 5px #555555, 25px 30px 15px 5px #999999;					/* Permite sombrear o elemento */
+}
+
+.imagemBeneficios:hover {
+	opacity: 0.3;
+}
+
+.video {
+	width: 560px;
+	margin: 3em auto;
+}
+
+/*****					PRODUTOS					*****/
+.produtos {
+	width: 940px;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+
+.produtos li {
+	display: inline-block;
+	text-align: center;
+	width: 30%;
+	vertical-align: top;					/*Alinha os elementos, que ocupam colunas adjacentes, pelo topo*/
+	margin: 0 1.5%;
+	padding: 30px 20px;
+	box-sizing: border-box;					/*Configura a largura máxima do elemento, impedindo que o padding e a margin modifiquem o tamanho do elemento*/
+	border: 5px solid #eeeeee;
+	border-top: 10px solid #cccccc;					/*Borda do topo*/
+	border-radius: 20px 20px 10px 10px;					/*Borda arredondada em graus*/
+}
+
+.produtos li:hover {
+	border-color: #000000;
+}
+
+.produtos li:active {
+	border-color: #efefef;	
+}
+
+.produtos li:hover h2 {
+	font-size: 34px;
+}
+
+.produtos h2 {
+	font-size: 30px;
+	font-weight: bold;
+}
+							
+.produto-descricao {
+	font-size: 18px;
+}
+
+.produto-preco {
+	font-size: 22px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+
+
+/*****					CONTATO					*****/
+main {
+	box-sizing: border-box;
+}
+
+#mainContato {
+	padding-left: 20%;
+}
+
+form {
+	margin: 40px 0;
+}
+
+form label, form legend {
+	display: block;					/*Configura os elementos em bloco*/
+	font-size: 20px;
+	margin: 0 0 10px;
+}
+
+.inputPadrao {
+	display: block;
+	margin: 0 0 20px;
+	padding: 5px 25px;
+	width: 50%;
+	font-size: 16px;
+}
+
+form fieldset label {
+	font-size: 16px;
+} 
+
+.marginContato {
+	margin: 40px 0 0 0;
+}
+
+#horario {
+	font-weight: bold;
+	font-size: 18px;
+}
+
+select, option, input.submit {
+	width: 10%;
+	height: 25px;
+	background: #cccccc;
+	color: #000000;
+	border: 2px solid #000000;
+	box-sizing: content-box;
+	font-weight: bold;
+	transition: 1s all;					/*Configura o tempo de transição dos elementos visuais da tela*/
+	cursor: pointer;					/*Modifica o formato do cursos para pointer quando o mouse passa sobre o elemento*/
+}
+
+select:hover, input.submit:hover {
+	background: #000000;
+	color: #ffffff;
+	transform: scale(1.2);					/*Permite o aumento gradual do elemento em uma escala de 20% quando o mouse passa por cima do elemento*/
+}
+
+input.submit:active {
+	background: #ffffff;
+	color: #000000;
+}
+
+.checkbox {
+	margin: 20px 0;
+}
+
+table {
+	margin: 20px 0 40px;
+}
+
+thead {
+	background: #555555;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+td, th {
+	border: 1px solid #555555;
+	padding: 8px 15px;
+}
+
+/*****					RESPONSIVO					*****/
+/*****					HOME					*****/
+@media screen and (max-width: 480px){
+	html, body {
+		height: 100%;
+	}
+	
+	header, footer {
+		height: 60%;
+	}
+
+	main#mainContato {
+		height: 140%;
+	}
+
+	.produtos {
+		padding: 5% 0;		
+	}
+
+	.produtos li {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 40%;
+		height: 450px;
+		margin: 5% auto;
+	}
+
+	.caixa, .footer {
+		margin-top: 10%;
+	}
+	
+	.caixa, .principal, h2.titulo, .mapaConteudo, .conteudoBeneficios, .video {
+		width: auto;
+	}
+
+	.principal, .mapa, .listaBeneficios, .imagemBeneficios {
+		width: 100%;
+	}
+
+	.principal h2.titulo, section.principal p, img.utensilios, .mapa h2.titulo, .beneficios h2.titulo, .imagemBeneficios, .video {
+		margin: 0 5%;
+	}
+
+	h1, nav, .utensiliosP, section.mapa > p, .listaBeneficios {
+		text-align: center;
+	}
+
+	nav {
+		position: static;
+		padding: 30px 0;
+	}
+
+	.principal, section.mapa {
+		padding-left: 0;
+		padding-right: 0;
+		margin-left: 0;
+		padding-bottom: 0;
+	}
+
+	.utensiliosP, section.mapa > p, .listaBeneficios {
+		margin: 2% 0;
+	}
+
+	.imagemBeneficios {
+		box-shadow: none;
+		width: 90%;
+		transition: none;	
+	}
+
+	.imagemBeneficios:hover {
+		transition: 2s;
+		opacity: 50%;
+	}
+
+	.video {
+		padding-top: 2em;
+	}
+}
+
+
+
+
